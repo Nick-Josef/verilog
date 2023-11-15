@@ -7,6 +7,7 @@ module TopModule(
 	 inout wire UB,
 	 inout wire [0:7] IO_0_7,
 	 inout wire [0:7] IO_8_15,
+	 inout wire [0:15] Robin_pin_connectors,
 );
 reg [15:0] data_register; // Register to store data for read/write operations
  always @* begin
@@ -47,7 +48,9 @@ module YourDesignTopLevel;
     .LB(LB_pin),
     .UB(UB_pin),
     .IO_0_7(data_0_7_pin),
-    .IO_8_15(data_8_15_pin),);
+    .IO_8_15(data_8_15_pin),
+    .Robin_pin_connectors(Robin_pin_connectors),
+);
 
     assign {pin143, pin142, pin141, pin140, pin139, pin138, pin137, pin134, 
             pin133, pin132, pin131, pin127, pin126, pin124, pin123, 
@@ -59,6 +62,7 @@ module YourDesignTopLevel;
 	assign {pin115} = UB_pin;
 	assign{pin112, pin111, pin78, pin79, pin80, pin81, pin82, pin83} = data_0_7_pin;
 	assign{pin84, pin85, pin87, pin88, pin92, pin93, pin95, pin97} = data_8_15_pin;
+	assign
 
     // Your other connections and logic here
 
