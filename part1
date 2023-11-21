@@ -62,7 +62,10 @@ module YourDesignTopLevel;
 	assign {pin115} = UB_pin;
 	assign{pin112, pin111, pin78, pin79, pin80, pin81, pin82, pin83} = data_0_7_pin;
 	assign{pin84, pin85, pin87, pin88, pin92, pin93, pin95, pin97} = data_8_15_pin;
-	assign
+	assign{pin62, pin61, pin60, pin59, pin58, pin57, pin56, pin55, pin98,
+	       pin99, pin100, pin101, pin102, pin103, pin104, pin105} = Robin_pin_connectors;
+
+
 
     // Your other connections and logic here
 
