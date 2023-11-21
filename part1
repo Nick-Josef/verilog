@@ -21,8 +21,8 @@ reg [15:0] data_register; // Register to store data for read/write operations
                 // Write to upper byte
                 data_register[8:15] = IO_8_15;
             end
-				end else if (WE == 1'b1 && CE == 1'b0 && OE == 1'b0) begin // Read operation
-				if (LB == 1'b0 && UB == 1'b1) begin
+	end else if (WE == 1'b1 && CE == 1'b0 && OE == 1'b0) begin // Read operation
+		if (LB == 1'b0 && UB == 1'b1) begin
                 // Read from lower byte
                 IO_0_7 = data_register[0:7];
             end else if (LB == 1'b1 && UB == 1'b0) begin
